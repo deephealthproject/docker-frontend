@@ -1,0 +1,7 @@
+.idea
+.vscode
+.DS_Store
+.config
+venv
+docker/src
+k8s/deephealth-frontend/charts/
