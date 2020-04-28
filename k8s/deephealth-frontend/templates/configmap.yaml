@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "deephealth-frontend.fullname" . }}-frontend-config
+  labels:
+    app.kubernetes.io/name: {{ include "deephealth-frontend.name" . }}
+    helm.sh/chart: {{ include "deephealth-frontend.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  config.json : |-
+    {
+        "apiBaseUrl": "{{ .Values.backendApiUrl }}"
+    }

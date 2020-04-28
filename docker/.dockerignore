@@ -1,0 +1,4 @@
+**/.git
+src/dist
+src/node_modules
+src/assets/config.json
