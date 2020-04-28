@@ -17,6 +17,11 @@ RUN npm install \
 # Production image to serve angular app through NGINX
 FROM bitnami/nginx:1.17.10
 
+# set metadata
+LABEL website="https://github.com/deephealthproject/" \
+      description="DeepHealth European Distributed Deep Learning Library" \
+      maintainer="marcoenrico.piras@crs4.it"
+
 # Copy the compiled angular app from the 'frontend-build' stage
 COPY frontend-site /opt/bitnami/nginx/conf/server_blocks/frontend
 # Copy NGINX site configuration
