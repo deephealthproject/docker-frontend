@@ -12,6 +12,9 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
+# URL of DeepHealth Backend-API
+backendApiUrl: ""
+
 service:
   type: NodePort
   port: 8080

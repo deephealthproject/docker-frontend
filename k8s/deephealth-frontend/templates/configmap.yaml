@@ -10,5 +10,5 @@ metadata:
 data:
   config.json : |-
     {
-        "apiBaseUrl": "http://backend.172.30.10.101.nip.io/backend"
+        "apiBaseUrl": "{{ .Values.backendApiUrl }}"
     }
