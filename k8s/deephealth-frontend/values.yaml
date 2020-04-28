@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: dhealth/frontend
-  tag: latest
+  tag: 06bf0d6
   pullPolicy: IfNotPresent
 
 nameOverride: ""
