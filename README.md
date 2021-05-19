@@ -33,7 +33,7 @@ helm repo update
 curl https://raw.githubusercontent.com/deephealthproject/docker-frontend/master/k8s/deephealth-frontend/values.yaml -o values.yaml
 ```
 
-3. Edit the `values.yaml` to configure your deployment ([here](#helm-chart-parameters) the available parameters) 
+3. Edit the `values.yaml` to configure your deployment ([here](#helm-chart-parameters) the available parameters)
 4. To install the chart with the release name `deephealth-frontend` :
 
 ```bash
@@ -52,7 +52,7 @@ Take a look at the deployment notes to know how to access services  (`helm statu
 git clone git@github.com:deephealthproject/docker-frontend.git
 ```
 
-2. Edit the ´k8s/values.yaml´ template to configure your deployment ([here](#helm-chart-parameters) the available parameters) 
+2. Edit the ´k8s/values.yaml´ template to configure your deployment ([here](#helm-chart-parameters) the available parameters)
 
 4. Deploy on Kubernetes through `helm`:
 
@@ -84,7 +84,7 @@ ingress:
 
 ### Parameters
 
-The following tables lists the main configurable parameters of the `deephealth-frontend` chart and their default values. 
+The following tables lists the main configurable parameters of the `deephealth-frontend` chart and their default values.
 
 | Parameter           | Description                                                                                   | Default            |
 | ------------------- | ----------------------------------------------------------------------------------------------| ------------------ |
