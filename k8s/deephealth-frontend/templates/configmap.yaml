@@ -10,5 +10,6 @@ metadata:
 data:
   config.json : |-
     {
-        "apiBaseUrl": "{{ .Values.backendApiUrl }}"
+        "apiBaseUrl": "{{ .Values.backend.apiUrl }}",
+        "clientId": "{{ .Values.backend.clientId }}"
     }
