@@ -1,26 +1,31 @@
 # Build frontend with npm and Angular-CLI
-FROM node:8 as frontend-build
-
-# Copy sources from a clone of the repository @ https://github.com/deephealthproject/front-end
-COPY src /app
+FROM node:10.9 as frontend-build
 
 # Set the working dir
 WORKDIR /app
 
-# Build and deploy the portal
-RUN npm install \
-    && npm uninstall @angular/cli -g \
-    && npm install -g @angular/cli@7.3.9 \
-    && ng build --prod
+# Copy dependency index
+COPY front-end/package*.json ./
 
+# Install dependencies
+RUN npm install -g @angular/cli@7.3.9 && npm ci
+
+# Copy sources from a clone of the repository @ https://github.com/deephealthproject/front-end
+COPY front-end .
+
+# COPY environment file
+COPY environment.prod.ts ./src/environments/
+
+# Build front-end for production deployments
+RUN ng build --prod
 
 # Production image to serve angular app through NGINX
 FROM bitnami/nginx:1.17.10
 
 # set metadata
 LABEL website="https://github.com/deephealthproject/" \
-      description="DeepHealth European Distributed Deep Learning Library" \
-      maintainer="marcoenrico.piras@crs4.it"
+    description="DeepHealth European Distributed Deep Learning Library" \
+    maintainer="marcoenrico.piras@crs4.it"
 
 # Copy the compiled angular app from the 'frontend-build' stage
 COPY frontend-site /opt/bitnami/nginx/conf/server_blocks/frontend
