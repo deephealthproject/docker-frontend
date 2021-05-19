@@ -12,8 +12,10 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
-# URL of DeepHealth Backend-API
-backendApiUrl: ""
+# Setting for the DeepHealth Backend API
+backend:
+  apiUrl: ""
+  clientId: ""
 
 service:
   type: NodePort

@@ -88,7 +88,9 @@ The following tables lists the main configurable parameters of the `deephealth-f
 
 | Parameter           | Description                                                                                   | Default            |
 | ------------------- | ----------------------------------------------------------------------------------------------| ------------------ |
-| `backendApiUrl`     | URL of the DeepHealth Back-end API                                                            | `nil`              |
+| `backend.apiUrl`    | URL of the DeepHealth Back-end API                                                            | `nil`              |
+| `backend.clientId`  | OAuth Client ID that you can get
+                        registering the front-end at <backend-host>/backend/auth/applications/                        | `nil`              |
 | `service.type`      | Kubernetes service type of the front-end                                                      | `NodePort`         |
 | `ingress.enabled`   | Enable the ingress for the front-end service                                                  | `false`            |
 | `ingress.annations` | Annotations for the ingress related with the front-end service                                | {}                 |
