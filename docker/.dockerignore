@@ -1,4 +1,7 @@
 **/.git
-src/dist
-src/node_modules
-src/assets/config.json
+**/node_modules
+front-end/dist
+front-end/src/assets/config.json
+front-end/src/environments/environment.dev.ts
+front-end/src/environments/environment.prod.ts
+front-end/src/environments/environment.test.ts
