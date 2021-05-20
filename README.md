@@ -12,12 +12,6 @@ Keep on reading to see how to [deploy on Kubernetes](#deploy-on-kubernetes) (see
 
 ## Deploy on Kubernetes
 
-### Requirements
-
-*  **Helm 2**
-
-
-
 ### Installation
 
 1. Add the `helm-charts` repository:
