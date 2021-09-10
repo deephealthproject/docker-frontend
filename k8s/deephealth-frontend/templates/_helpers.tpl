@@ -25,3 +25,15 @@ Create chart name and version as used by the chart label.
 {{- define "deephealth-frontend.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Return the proper Docker Image Registry Secret Names
+*/}}
+{{- define "deephealth-frontend.imagePullSecrets" -}}
+  {{- if (not (empty .Values.image.pullSecrets)) }}
+imagePullSecrets:
+    {{- range .Values.image.pullSecrets }}
+  - name: {{ . }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
