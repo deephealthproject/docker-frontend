@@ -86,11 +86,12 @@ The following tables lists the main configurable parameters of the `deephealth-f
 | `backend.clientId`  | OAuth Client ID that you can get registering the front-end at <backend-host>/backend/auth/applications/  | `nil`              |
 | `service.type`      | Kubernetes service type of the front-end                                                                 | `NodePort`         |
 | `ingress.enabled`   | Enable the ingress for the front-end service                                                             | `false`            |
-| `ingress.annations` | Annotations for the ingress related with the front-end service                                           | {}                 |
+| `ingress.annations` | Annotations for the ingress related with the front-end service                                           | `{}`               |
 | `ingress.hosts`     | Hosts paths for the ingress related with the front-end service (see example on `values.yaml`)            | `nil`              |
 | `image.repository`  | Front-end App Docker Image                                                                               | `dhealth/frontend` |
 | `image.tag`         | Front-end App Docker Image Tag                                                                           | `latest`           |
 | `image.pullPolicy`  | Pull policy for the front-end App Docker Image                                                           | `IfNotPresent`     |
+| `image.pullSecrets` | Specify docker-registry secret names as an array                                                         | `[]`               |
 | `replicaCount`      | Number of replicas of the the front-end server                                                           | `1`                |
 | `resources`         | CPU/Memory resource requests/limits of the front-end server replica                                      | `nil`              |
 | `nodeSelector`      | Node labels for pod assignment of the front-end server replicas                                          | `nil`              |
