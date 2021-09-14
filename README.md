@@ -86,7 +86,7 @@ The following tables lists the main configurable parameters of the `deephealth-f
 | `backend.clientId`  | OAuth Client ID that you can get registering the front-end at <backend-host>/backend/auth/applications/  | `nil`              |
 | `service.type`      | Kubernetes service type of the front-end                                                                 | `NodePort`         |
 | `ingress.enabled`   | Enable the ingress for the front-end service                                                             | `false`            |
-| `ingress.annations` | Annotations for the ingress related with the front-end service                                           | `{}`               |
+| `ingress.annotations` | Annotations for the ingress related with the front-end service                                           | `{}`               |
 | `ingress.hosts`     | Hosts paths for the ingress related with the front-end service (see example on `values.yaml`)            | `nil`              |
 | `image.repository`  | Front-end App Docker Image                                                                               | `dhealth/frontend` |
 | `image.tag`         | Front-end App Docker Image Tag                                                                           | `latest`           |
