@@ -1,5 +1,5 @@
 # Build frontend with npm and Angular-CLI
-FROM node:10.9 as frontend-build
+FROM node:12 as frontend-build
 
 # Set the working dir
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY front-end/package*.json ./
 
 # Install dependencies
-RUN npm install -g @angular/cli@7.3.9 && npm ci
+RUN npm install -g @angular/cli@12.2.16 && npm ci
 
 # Copy sources from a clone of the repository @ https://github.com/deephealthproject/front-end
 COPY front-end .
